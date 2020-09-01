@@ -7,24 +7,28 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EXIWARE
+namespace EXIWARE.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class PRODUCTO
+    public partial class SUCURSAL
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public PRODUCTO()
+        public SUCURSAL()
         {
-            this.PEDIDO_DETALLE = new HashSet<PEDIDO_DETALLE>();
+            this.EMPLEADO = new HashSet<EMPLEADO>();
+            this.PEDIDO = new HashSet<PEDIDO>();
         }
     
         public int ID { get; set; }
         public string NOMBRE { get; set; }
-        public int STOCK { get; set; }
+        public string TELEFONO { get; set; }
+        public string DIRECCION { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PEDIDO_DETALLE> PEDIDO_DETALLE { get; set; }
+        public virtual ICollection<EMPLEADO> EMPLEADO { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PEDIDO> PEDIDO { get; set; }
     }
 }

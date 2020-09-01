@@ -7,27 +7,29 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EXIWARE
+namespace EXIWARE.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class EMPLEADO
+    public partial class PEDIDO
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public EMPLEADO()
+        public PEDIDO()
         {
-            this.PEDIDO = new HashSet<PEDIDO>();
+            this.PEDIDO_DETALLE = new HashSet<PEDIDO_DETALLE>();
         }
     
         public int ID { get; set; }
-        public string DOCUMENTO { get; set; }
-        public string NOMBRE { get; set; }
-        public string APELLIDO { get; set; }
         public Nullable<int> ID_SUCURSAL { get; set; }
+        public Nullable<int> ID_EMPLEADO { get; set; }
+        public Nullable<int> ID_CLIENTE { get; set; }
+        public System.DateTime FECHA { get; set; }
     
+        public virtual CLIENTE CLIENTE { get; set; }
+        public virtual EMPLEADO EMPLEADO { get; set; }
         public virtual SUCURSAL SUCURSAL { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PEDIDO> PEDIDO { get; set; }
+        public virtual ICollection<PEDIDO_DETALLE> PEDIDO_DETALLE { get; set; }
     }
 }

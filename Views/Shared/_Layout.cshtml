@@ -20,30 +20,30 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <!--<li>@Html.ActionLink("Home", "Index", "Home")</li>-->
+                    <!--<li>@Html.ActionLink("About", "About", "Home")</li>-->
+                    <!--<li>@Html.ActionLink("Contact", "Contact", "Home")</li>-->
 
-                    <li>@Html.ActionLink("Sucursales", "Contact", "Sucursal")</li>
-                    <li>@Html.ActionLink("Empleados", "Contact", "Empleado")</li>
-                    <li>@Html.ActionLink("Clientes", "Contact", "Cliente")</li>
-                    <li>@Html.ActionLink("Productos", "Contact", "Producto")</li>
-                    <li>@Html.ActionLink("Pedido", "Contact", "Pedido")</li>
+                    <li>@Html.ActionLink("Sucursales", "Index", "SUCURSALs")</li>
+                    <li>@Html.ActionLink("Empleados", "Index", "EMPLEADOes")</li>
+                    <li>@Html.ActionLink("Clientes", "Index", "CLIENTEs")</li>
+                    <li>@Html.ActionLink("Productos", "Index", "PRODUCTOes")</li>
+                    <li>@Html.ActionLink("Pedido", "Index", "PEDIDOes")</li>
 
                 </ul>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Exiware</p>
-        </footer>
-    </div>
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - Exiware</p>
+            </footer>
+        </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
-</body>
-</html>
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+    </body>
+    </html>

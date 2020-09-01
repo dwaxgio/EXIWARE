@@ -310,7 +310,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="ExiwareEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="ExiwareEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="CLIENTE" EntityType="Self.CLIENTE" />
           <EntitySet Name="EMPLEADO" EntityType="Self.EMPLEADO" />
           <EntitySet Name="PEDIDO" EntityType="Self.PEDIDO" />
@@ -347,7 +347,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="ExiwareModelStoreContainer" CdmEntityContainer="ExiwareEntities">
+        <EntityContainerMapping StorageEntityContainer="ExiwareModelStoreContainer" CdmEntityContainer="ExiwareEntities1">
           <EntitySetMapping Name="CLIENTE">
             <EntityTypeMapping TypeName="ExiwareModel.CLIENTE">
               <MappingFragment StoreEntitySet="CLIENTE">

@@ -7,26 +7,24 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EXIWARE
+namespace EXIWARE.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class CLIENTE
+    public partial class PRODUCTO
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public CLIENTE()
+        public PRODUCTO()
         {
-            this.PEDIDO = new HashSet<PEDIDO>();
+            this.PEDIDO_DETALLE = new HashSet<PEDIDO_DETALLE>();
         }
     
         public int ID { get; set; }
-        public string DOCUMENTO { get; set; }
         public string NOMBRE { get; set; }
-        public string APELLIDO { get; set; }
-        public bool ESTADO { get; set; }
+        public int STOCK { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PEDIDO> PEDIDO { get; set; }
+        public virtual ICollection<PEDIDO_DETALLE> PEDIDO_DETALLE { get; set; }
     }
 }

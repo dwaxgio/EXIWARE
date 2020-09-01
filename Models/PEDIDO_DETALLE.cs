@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EXIWARE
+namespace EXIWARE.Models
 {
     using System;
     using System.Collections.Generic;

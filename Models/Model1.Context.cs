@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EXIWARE
+namespace EXIWARE.Models
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ExiwareEntities : DbContext
+    public partial class ExiwareEntities1 : DbContext
     {
-        public ExiwareEntities()
-            : base("name=ExiwareEntities")
+        public ExiwareEntities1()
+            : base("name=ExiwareEntities1")
         {
         }
     
