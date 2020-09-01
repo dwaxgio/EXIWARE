@@ -1,0 +1,47 @@
+﻿@model IEnumerable<EXIWARE.Models.PEDIDO_DETALLE>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PRODUCTO_CANTIDAD)
+        </th>
+        <th>
+            <!--@Html.DisplayNameFor(model => model.PEDIDO.ID)-->
+            PEDIDO ID
+        </th>
+        <th>
+            <!-- @Html.DisplayNameFor(model => model.PRODUCTO.NOMBRE)-->
+            NOMBRE PRODUCTO
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRODUCTO_CANTIDAD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PEDIDO.ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRODUCTO.NOMBRE)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
