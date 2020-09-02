@@ -54,6 +54,11 @@ namespace EXIWARE.Controllers
             if (ModelState.IsValid)
             {
                 db.PEDIDO_DETALLE.Add(pEDIDO_DETALLE);
+
+                //// agregar metodo para actualizar stock de producto, restandolo del pedido_detalle
+                //var sql = "UPDATE PRODUCTO SET PRODUCTO.STOCK = PRODUCTO.STOCK - PRODUCTO_CANTIDAD FROM PRODUCTO WHERE PRODUCTO.ID = PEDIDO_DETALLE.ID_PRODUCTO";
+
+
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
