@@ -1,0 +1,52 @@
+﻿@model EXIWARE.Models.PEDIDO_PEDIDODETALLEViewModel
+
+@{
+    ViewBag.Title = "PedidoPedidoDetalle";
+}
+
+<h2>PedidoPedidoDetalle</h2>
+
+<div>
+    <h4>PEDIDO_PEDIDODETALLEViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+    </dl>
+</div>
+
+
+<div>
+
+    <table class="table">
+        <tr>
+            <th>
+                ID PEDIDO
+            </th>
+            <th>
+                ID PRODUCTO
+            </th>
+            <th></th>
+        </tr>
+        @foreach(var item in Model._PEDIDO_DETALLE)
+        {
+            <tr>
+                <td>
+                    @item.ID_PEDIDO
+                </td>
+                <td>
+                    @item.ID_PRODUCTO
+                </td>
+            </tr>
+        }
+    </table>
+
+    <table class="table">
+
+    </table>
+</div>
+
+
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

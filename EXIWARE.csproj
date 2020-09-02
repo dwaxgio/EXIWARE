@@ -134,6 +134,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PEDIDOesController.cs" />
     <Compile Include="Controllers\PEDIDO_DETALLEController.cs" />
+    <Compile Include="Controllers\PEDIDO_PEDIDODETALLEController.cs" />
     <Compile Include="Controllers\PRODUCTOesController.cs" />
     <Compile Include="Controllers\SUCURSALsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -166,6 +167,7 @@
     <Compile Include="Models\PEDIDO_DETALLE.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\PEDIDO_PEDIDODETALLEViewModel.cs" />
     <Compile Include="Models\PRODUCTO.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -257,6 +259,7 @@
     <Content Include="Views\PEDIDO_DETALLE\Details.cshtml" />
     <Content Include="Views\PEDIDO_DETALLE\Edit.cshtml" />
     <Content Include="Views\PEDIDO_DETALLE\Index.cshtml" />
+    <Content Include="Views\PEDIDO_PEDIDODETALLE\PedidoPedidoDetalle.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
