@@ -39,7 +39,8 @@ namespace EXIWARE.Controllers
         // GET: PEDIDOes/Create
         public ActionResult Create()
         {
-            ViewBag.ID_CLIENTE = new SelectList(db.CLIENTE, "ID", "NOMBRE");
+            //ViewBag.ID_CLIENTE = new SelectList(db.CLIENTE, "ID", "NOMBRE");
+            ViewBag.ID_CLIENTE = new SelectList(db.CLIENTE.Where(u => u.ESTADO == true), "ID", "NOMBRE");
             ViewBag.ID_EMPLEADO = new SelectList(db.EMPLEADO, "ID", "NOMBRE");
             ViewBag.ID_SUCURSAL = new SelectList(db.SUCURSAL, "ID", "NOMBRE");
             return View();
@@ -59,7 +60,7 @@ namespace EXIWARE.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.ID_CLIENTE = new SelectList(db.CLIENTE, "ID", "DOCUMENTO", pEDIDO.ID_CLIENTE);
+            ViewBag.ID_CLIENTE = new SelectList(db.CLIENTE, "ID", "DOCUMENTO", pEDIDO.ID_CLIENTE);        
             ViewBag.ID_EMPLEADO = new SelectList(db.EMPLEADO, "ID", "DOCUMENTO", pEDIDO.ID_EMPLEADO);
             ViewBag.ID_SUCURSAL = new SelectList(db.SUCURSAL, "ID", "NOMBRE", pEDIDO.ID_SUCURSAL);
             return View(pEDIDO);

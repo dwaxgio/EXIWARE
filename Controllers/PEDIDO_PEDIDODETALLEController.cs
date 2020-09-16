@@ -16,7 +16,8 @@ namespace EXIWARE.Controllers
             // obtener pedido por id
             var pedido = (from a in db.PEDIDO
                           where a.ID == id
-                          select a).FirstOrDefault();
+                          select a).ToList();
+            // select a).FirstOrDefault();
 
             // obtener pedido_detalle por id
             var pedidoDetalle = (from a in db.PEDIDO_DETALLE

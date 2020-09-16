@@ -13,38 +13,79 @@
     </dl>
 </div>
 
-
 <div>
 
     <table class="table">
         <tr>
             <th>
-                ID PEDIDO
+                ID PEDIDO</br>
+
             </th>
             <th>
-                ID PRODUCTO
+                SUCURSAL</br>
+
+            </th>
+            <th>
+                EMPLEADO</br>
+
+            </th>
+            <th>
+                CLIENTE</br>
+
             </th>
             <th></th>
         </tr>
-        @foreach(var item in Model._PEDIDO_DETALLE)
+        @foreach (var item in Model._PEDIDO)
+        {
+            <tr>
+                <td>
+                    @item.ID
+                </td>
+                <td>
+                    @item.SUCURSAL.NOMBRE
+                </td>
+                <td>
+                    @item.EMPLEADO.NOMBRE
+                </td>
+                <td>
+                    @item.CLIENTE.NOMBRE
+                </td>
+            </tr>
+        }
+
+    </table>
+
+
+    </br>
+
+    <table class="table">
+        <tr>
+            <td>
+                <b>ID PEDIDO</b>
+            </td>
+            <td>
+                <b>PRODUCTO</b>
+            </td>
+            <td>
+                <b>CANTIDAD</b>
+            </td>
+        </tr>
+        @foreach (var item in Model._PEDIDO_DETALLE)
         {
             <tr>
                 <td>
                     @item.ID_PEDIDO
                 </td>
                 <td>
-                    @item.ID_PRODUCTO
+                    @item.PRODUCTO
+                </td>
+                <td>
+                    @item.PRODUCTO_CANTIDAD
                 </td>
             </tr>
         }
     </table>
-
-    <table class="table">
-
-    </table>
 </div>
-
-
 
 <p>
     @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
